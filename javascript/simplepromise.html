@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple promise</title>
+</head>
+<body>
+    value:<input type="text" name="value">
+    <script>
+       const lotteryPromise= new Promise((reslove,reject)=>{
+            if(Math.random>=0.5){
+                reslove('You win');
+            }else{
+                reject("sorry you did not win");
+            }
+        });
+        lotteryPromise.then(response=>response.json()).catch(err=>console.error(err));
+
+        navigator.geolocation.getCurrentPosition(position=>
+            console.log(position)
+        ,err=>console.log(err))
+        console.log('get current position');
+    </script>
+</body>
+</html>
