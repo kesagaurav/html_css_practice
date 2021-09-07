@@ -1,0 +1,15 @@
+let xhr = new XMLHttpRequest();
+console.log(xhr.readyState);
+xhr.addEventListener("readystatechange", function () {
+    console.log(xhr.readyState);
+    if (xhr.readyState == 4) {
+        let countries = JSON.parse(xhr.responseText);
+        console.log(countries);
+        for (let country of countries) {
+            console.log(country.name);
+        }
+    }
+});
+xhr.open("GET", "https://restcountries.eu/rest/v2/name/united");
+xhr.send();
+console.log(xhr.responseText);
