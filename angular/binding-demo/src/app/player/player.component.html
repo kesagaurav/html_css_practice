@@ -25,7 +25,7 @@
 <div class="container">
   <h2>please enter the player details above</h2>
   <label>Id</label>
-  <input class="form-control" type="text" [(ngModel)]="player.id">
+  <input class="form-control" type="number"  [(ngModel)]="player.id">
   <label>Name</label>
   <input class="form-control" type="text" [(ngModel)]="player.name">
   <label>Country</label>
@@ -42,5 +42,10 @@
 
 <div class="jumbotron">
   <h1 class="display-4">pipe demo</h1>
-<app-pipe></app-pipe>
+
+</div>
+
+
+<div class="conatiner">
+  <app-pipe></app-pipe>
 </div>
