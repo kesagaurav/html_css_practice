@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 import { FormsModule } from '@angular/forms';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayerComponent
+    PlayerComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
