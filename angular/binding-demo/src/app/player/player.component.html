@@ -1,0 +1,42 @@
+<div class="container-fluid">
+<h3 *ngIf="flag">player details</h3>
+<table *ngIf="flag" class="table table-light">
+  <thead class="thead-light">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Avatar</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of playerList">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.country}}</td>
+      <td><img class="img-thumbnail" [src]="p.avatar"></td>
+      <td><button type="button" class="btn btn-primary" (click)="deletePlayerBasedOnId(p.id)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="container">
+  <h2>please enter the player details above</h2>
+  <label>Id</label>
+  <input class="form-control" type="text" [(ngModel)]="player.id">
+  <label>Name</label>
+  <input class="form-control" type="text" [(ngModel)]="player.name">
+  <label>Country</label>
+  <input class="form-control" type="text" [(ngModel)]="player.country">
+<label>ImageUrl</label>
+<input class="form-control" type="text" [(ngModel)]="player.avatar">
+<button type="button" class="btn btn-primary" (click)="addPlayer()" >Save Player</button>
+</div>
+
+<div class="container-fluid">
+  <button type="button" class="btn btn-danger" (click)="deletePlayer()" >remove Player</button>
+</div>
+
+
