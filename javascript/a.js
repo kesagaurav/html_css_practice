@@ -58,7 +58,7 @@ console.log("after using map the value is " + b);
 
 var c={
     id:"1",
-    "name":"kesagaurav"
+    name:"kesagaurav"
 };
 
 console.log(c);

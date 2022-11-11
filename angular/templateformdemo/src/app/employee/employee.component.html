@@ -1,0 +1,31 @@
+<div class="container">
+<table class="table table-light">
+  <thead class="thead-light">
+    <tr *ngIf="flag">
+      <th>id</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of employeeList">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.salary}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="container">
+  <label>Id</label>
+  <input class="form-control" type="number" [(ngModel)]="employee.id"> <!-- this is 2 way dtabinding-->
+  <label>Name</label>
+  <input class="form-control" type="text" [(ngModel)]="employee.name">
+  <label>Salary</label>
+  <input class="form-control" type="number" [(ngModel)]="employee.salary">
+  <button type="button" class="btn btn-primary" (click)="addEmployee()" >Save Player</button>
+
+
+</div>

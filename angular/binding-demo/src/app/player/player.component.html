@@ -22,16 +22,18 @@
 </table>
 </div>
 
+
 <div class="container">
   <h2>please enter the player details above</h2>
   <label>Id</label>
-  <input class="form-control" type="number"  [(ngModel)]="player.id">
+  <input class="form-control" type="number" [(ngModel)]="player.id">
   <label>Name</label>
-  <input class="form-control" type="text" [(ngModel)]="player.name">
+  <input class="form-control" type="text"   [(ngModel)]="player.name">
   <label>Country</label>
-  <input class="form-control" type="text" [(ngModel)]="player.country">
+  <input class="form-control" type="text"  [(ngModel)]="player.country">
 <label>ImageUrl</label>
-<input class="form-control" type="text" [(ngModel)]="player.avatar">
+<input class="form-control" type="text"  [(ngModel)]="player.avatar">
+
 <button type="button" class="btn btn-primary" (click)="addPlayer()" >Save Player</button>
 </div>
 

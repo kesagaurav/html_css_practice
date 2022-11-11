@@ -26,7 +26,6 @@ var Person = /** @class */ (function (_super) {
         _this.personName = personName;
         _this.contactNumber = contactNumber;
         _this.personage = personage;
-        _this.personGender = personGender;
         return _this;
     }
     Person.prototype.showPerson = function () {
